@@ -45,7 +45,8 @@ app.listen(port, ()=>{
 
 /* =======================
     CONNECT TO MONGODB SERVER
-const client = new MongoClient(config.mongodbUrl, { useUnifiedTopology: true, useNewUrlParser: true });
+======================= */
+/*     const client = new MongoClient(config.mongodbUrl, { useUnifiedTopology: true, useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
