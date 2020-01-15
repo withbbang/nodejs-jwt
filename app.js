@@ -20,6 +20,8 @@ const port = process.env.PORT || 4000
 ==========================*/
 const app = express()
 
+mongoose.connect(config.mongodbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+
 app.use(bodyParser.urlencoded({extended : false}))
 app.use(bodyParser.json())
 
@@ -43,10 +45,10 @@ app.listen(port, ()=>{
 
 /* =======================
     CONNECT TO MONGODB SERVER
-==========================*/
+==========================*//* 
 const client = new MongoClient(config.mongodbUrl, { useUnifiedTopology: true, useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
   client.close();
-});
+}); */

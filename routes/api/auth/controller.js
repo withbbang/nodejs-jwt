@@ -15,11 +15,10 @@ exports.getRes = (req, res)=>{
 exports.register = (req, res) => {
     const { username, password } = req.body
     let newUser = null
-    console.log("req.body.username : ", username)
-    console.log("req.body.password : ", password)
 
     // create a new user if does not exist
     const create = (user) => {
+        console.log("visit create in controller?")
         if(user) {
             throw new Error('username exists')
         } else {
@@ -60,9 +59,9 @@ exports.register = (req, res) => {
 
     // check username duplication
     User.findOneByUsername(username)
-    .then(create)
-    .then(count)
-    .then(assign)
-    .then(respond)
+    .then(res_1=>create(res_1))
+    .then(res_2=>count(res_2))
+    .then(res_3=>assign(res_3))
+    .then(res_4=>respond(res_4))
     .catch(onError)
 }
