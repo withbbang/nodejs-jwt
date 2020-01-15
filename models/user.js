@@ -21,8 +21,6 @@ User.statics.create = function(username, password) {
 
 // find one user by using username
 User.statics.findOneByUsername = function(username) {
-    console.log("들어옴?? username : ", username)
-    console.log("this.findOne : ", this.findOne({username}).exec())
     return this.findOne({
         username
     }).exec()
