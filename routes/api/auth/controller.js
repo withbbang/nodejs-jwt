@@ -20,6 +20,7 @@ exports.register = (req, res) => {
 
     // create a new user if does not exist
     const create = (user) => {
+        console.log("create visited?")
         if(user) {
             throw new Error('username exists')
         } else {

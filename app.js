@@ -32,7 +32,7 @@ app.get('/', (req, res)=>{
     res.send('Hello JWT')
 })
 
-// configure api router
+// configure api routerß
 app.use('/api', require('./routes/api'))
 
 // open the server
@@ -44,6 +44,7 @@ app.listen(port, ()=>{
 /* =======================
     CONNECT TO MONGODB SERVER
 ==========================*/
+
 const client = new MongoClient(config.mongodbUrl, { useUnifiedTopology: true, useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
