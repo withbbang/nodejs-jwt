@@ -1,0 +1,18 @@
+{
+    "prettier.printWidth": 150,
+    "prettier.tabWidth": 4,
+    "editor.tabSize": 4,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "editor.formatOnSave": true,
+    "javascript.format.enable": false,
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "typescript.locale": "ko",
+    "editor.detectIndentation": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false
+}
