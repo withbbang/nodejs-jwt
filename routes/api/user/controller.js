@@ -20,7 +20,7 @@ exports.assignAdmin = (req, res) => {
     }
 
     User.findOneByUsername(req.params.username)
-        .then(user => user.assignAdmin)
+        .then(user => user.assignAdmin())
         .then(
             res.json({
                 success: true
